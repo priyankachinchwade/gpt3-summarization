@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(private router: Router){ }
   title = 'quad-squad';
+
+   goToPage(pageName:string){
+    console.info("hello " + pageName);
+    this.router.navigateByUrl('summarization');//(['/summarization']);
+  }
+  
 }
+
+
+
+
